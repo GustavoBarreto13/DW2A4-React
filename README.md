@@ -1,1 +1,3 @@
 # DW2A4-React
+
+O aluno deverá instalar o NodeJS e o Yarn, assistir e códificar os exemplos das aulas 1 até a 10 da Playlist de ambiente do React. Em seguida, ao final da codificação, o aluno deverá salvar os arquivo em uma subpasta "A7", dentro da pasta "atividades" no repositório do github da disciplina, assim como, fazer deploy (publicar do buil) da ferramenta web no GitHub Pages (ou quaisquer outros serviços) e enviar o link do repositório e da página da ferramenta no moddle.
