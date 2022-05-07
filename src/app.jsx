@@ -3,5 +3,5 @@ import './styles/global.scss';
 
 
 export function app() {
-    return <repositoryList />
+    return (<repositoryList />)
 }
