@@ -1,22 +1,30 @@
 ﻿import '../styles/reposiries.scss';
 import { repositoryItem } from "./repositoryItem"
+import { useState, useEffect } from "react";
+import { CleanPlugin } from 'webpack';
 
-
-const repository = {
-    name: "Atividade",
-    description: "Descrição da Atividade",
-    link: "https://github.com/GustavoBarreto13/DW2A4-React",
-}
+// https://api.github.com/users/santicioli/repos
 
 export function repositoryList() {
+
+    const [repositories, setRepositories] = useState([])
+
+    useEffect(() => {
+        fetch('https://api.github.com/users/santicioli/repos')
+            .then(response => response.json())
+            .then(data => setRepositories(data))
+    }, [])
+
+
     return (
         <section className="repository-list">
             <h1>Lista de Repositórios</h1>
             <ul>
-                < repositoryItem repository={repository}/>
-                < repositoryItem repository={repository}/>
-                < repositoryItem repository={repository}/>
-                < repositoryItem repository={repository}/>
+                {repositories.map(repository => {
+                    return < repositoryItem repository={repository}/>
+                })}
+                < repositoryItem repository={repository} key={repository.id}/>
+                
             </ul>
         </section>
     )

@@ -6,7 +6,7 @@
                 <li>
                     <strong>{props.repository?.name ?? 'Repositório Padrão'}</strong>
                     <p>{props.repository?.description}</p>
-                    <a href={props.repository?.link}>Acesso ao Repositório</a>
+                    <a href={props.repository?.html_url}>Acesso ao Repositório</a>
                 </li>
             </ul>
         </section>
